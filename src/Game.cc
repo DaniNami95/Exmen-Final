@@ -6,6 +6,7 @@
 sf::CircleShape* circle{new sf::CircleShape()};
 
 TextObject* textObj1{new TextObject(ASSETS_FONT_PSYCHOPATHY, 50, sf::Color::White, sf::Text::Bold)};
+ Audio* audioObjt1{new Audio(ASSETS_AUDIO_LABYRINTH)};
 
 sf::Clock* gameClock{new sf::Clock()};
 float deltaTime{};
@@ -200,6 +201,7 @@ void Game::Start()
   AddGameObject(player1);
 
   textObj1->SetTextStr("Dungeon of the Death");
+  //audioObjt1->play();
 }
 
 void Game::Initialize()
