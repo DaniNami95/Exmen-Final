@@ -6,7 +6,7 @@
 sf::CircleShape* circle{new sf::CircleShape()};
 
 TextObject* textObj1{new TextObject(ASSETS_FONT_PSYCHOPATHY, 50, sf::Color::White, sf::Text::Bold)};
- Audio* audioObjt1{new Audio(ASSETS_AUDIO_LABYRINTH)};
+ Audio* audioObjt1{new Audio(ASSETS_AUDIO_LABYRINTH, 60.f)};
 
 sf::Clock* gameClock{new sf::Clock()};
 float deltaTime{};
