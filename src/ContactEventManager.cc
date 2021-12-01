@@ -29,7 +29,6 @@ void ContactEventManager::BeginContact(b2Contact* contact)
     {
       gameObjectsDeleteList->push_back(actorB);
       //textObj1->SetTextStr("Ganaste");
-      exit(-1);
     }
   }
   
