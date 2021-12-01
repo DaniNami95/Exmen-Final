@@ -1,10 +1,10 @@
 #include "ContactEventManager.hh"
 #include "GameObject.hh"
 #include<iostream>
-#include "TextObject.hh"
-#include "Constants.hh"
+//#include "TextObject.hh"
+//#include "Constants.hh"
 
-TextObject* textObj1{new TextObject(ASSETS_FONT_PSYCHOPATHY, 50, sf::Color::White, sf::Text::Bold)};
+//TextObject* textObj1{new TextObject(ASSETS_FONT_PSYCHOPATHY, 50, sf::Color::White, sf::Text::Bold)};
 
 ContactEventManager::ContactEventManager(std::vector<GameObject*>*& gameObjects, std::vector<GameObject*>*& gameObjectsDeleteList)
 {
@@ -28,9 +28,14 @@ void ContactEventManager::BeginContact(b2Contact* contact)
     if(actorB->GetTagName().compare("chest")==0)
     {
       gameObjectsDeleteList->push_back(actorB);
-      textObj1->SetTextStr("Ganaste");
+      //textObj1->SetTextStr("Ganaste");
       exit(-1);
     }
+  }
+  
+  if(actorB->GetTagName().compare("enemy")==0)
+  {
+    exit(-1);
   }
 }
 
